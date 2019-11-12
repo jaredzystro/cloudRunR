@@ -1,7 +1,7 @@
 #' @get /hello
 #' @html
 function(){
-  "<html><h1>hello world</h1></html>"
+  "50,50,25,25"
 }
 
 #' Echo the parameter that was sent in
