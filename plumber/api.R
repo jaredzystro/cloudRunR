@@ -28,3 +28,13 @@ function(spec){
   plot(myData$Sepal.Length, myData$Petal.Length,
        main=title, xlab="Sepal Length", ylab="Petal Length")
 }
+
+#* Add the numbers that were sent in
+#* @param body The numbers to add
+#* @post /sumall
+function(body="value\n1\n1\n1\n"){
+  data <- read.csv(text=body)
+  
+  sum(data$value)
+  
+}
