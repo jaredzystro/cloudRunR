@@ -1,3 +1,6 @@
+library(plumber)
+library(jsonlite)
+
 #' @get /hello
 #' @html
 function(){
