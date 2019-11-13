@@ -32,7 +32,7 @@ function(spec){
 #' Add the numbers that were sent in
 #' @param body The numbers to add
 #' @post /sumall
-@' @json
+#' @json
 function(body="1,3,4"){
 
   body
