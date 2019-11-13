@@ -13,7 +13,7 @@ doubleIt <- function (input_matrix) {
 #' @param body The numbers to add
 #' @post /doubleIt
 #' @json
-function(){
+function(body){
   
   body_matrix <- fromJSON(body)
   
