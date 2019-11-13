@@ -33,8 +33,13 @@ function(spec){
 #' @param body The numbers to add
 #' @post /sumall
 #' @json
-function(body="1,3,4"){
-
-  body
+function(body="[[1,3],[3,4]]"){
+  
+  my_matrix <- fromJSON(body)
+  # my_df <- as.data.frame(my_matrix)
+  
+  my_matrix <- my_matrix*2
+  
+  toJSON(my_matrix)
   
 }
