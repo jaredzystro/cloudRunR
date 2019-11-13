@@ -35,6 +35,6 @@ function(spec){
 #' @json
 function(body="1,3,4"){
 
-  list(body = body)
+  body
   
 }
