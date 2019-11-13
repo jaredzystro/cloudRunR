@@ -32,9 +32,8 @@ function(spec){
 #' Add the numbers that were sent in
 #' @param body The numbers to add
 #' @post /sumall
-function(body="value\n1\n1\n1\n"){
-  data <- read.csv(text=body)
-  
-  sum(data$value)
+function(body="1,3,4"){
+
+  body
   
 }
