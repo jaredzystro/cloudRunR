@@ -1,7 +1,7 @@
 FROM trestletech/plumber
 LABEL maintainer="mark"
 
-RUN ["install2.r", "-r 'https://cloud.r-project.org'", "lme4", "jsonlite"]
+RUN R -e "install.packages('lme4', method='wget')"
 
 COPY [".", "./"]
 
