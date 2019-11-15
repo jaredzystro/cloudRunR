@@ -1,5 +1,8 @@
+install.packages("lme4")
+
 library(plumber)
 library(jsonlite)
+library(lme4)
 
 echoIt <- function (input_matrix) {
   
