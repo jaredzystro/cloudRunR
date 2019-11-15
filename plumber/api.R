@@ -30,8 +30,11 @@ AnovaIt <- function (input_matrix) {
   l_model <- lm(Height ~ Entry + Rep, data=data_set)
   anova_data <- anova(l_model)
   output_df <- as.data.frame(anova_data)
+
+  #Convert back to matrix with row and column names as cells
   output_matrix <- as.matrix(output_df)
-  dimnames(output_matrix) <- list(rownames(output_df),colnames(output_df))
+  output_matrix <- rbind(colnames(output_matrix),output_matrix)
+  output_matrix <- cbind(rownames(output_matrix),output_matrix)
   
   return (output_matrix)
 }
