@@ -1,6 +1,5 @@
 library(plumber)
 library(jsonlite)
-library(lme4)
 
 echoIt <- function (input_matrix) {
   
@@ -28,7 +27,7 @@ AnovaIt <- function (input_matrix) {
   data_set$Rep <- as.factor(data_set$Rep)
   data_set[, !names(data_set) %in% c("Entry", "Rep")]  <- as.numeric(data_set[, !names(data_set) %in% c("Entry", "Rep")])
   
-  l_model <- lmer(Height ~ Entry + (1|Rep), data=data_set)
+  l_model <- lm(Height ~ Entry + Rep, data=data_set)
   anova_data <- anova(l_model)
   output_df <- as.data.frame(anova_data)
   output_matrix <- as.matrix(output_df)
