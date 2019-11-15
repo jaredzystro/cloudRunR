@@ -13,16 +13,9 @@ RUN apt-get update -qq && apt-get -y --no-install-recommends install \
   libsasl2-dev \
   && install2.r --error \
     --deps TRUE \
-    tidyverse \
-    dplyr \
-    devtools \
     plumber \
     lme4 \
-    formatR \
-    remotes \
-    selectr \
-    caTools \
-    BiocManager
+    jsonlite
 
 COPY [".", "./"]
 
