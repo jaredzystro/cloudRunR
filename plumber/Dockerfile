@@ -1,7 +1,5 @@
 FROM inwt/r-base:latest
 
-COPY aws.config /app/.aws/config
-
 RUN apt-get -y update \
     && installPackage \
         lme4 \
